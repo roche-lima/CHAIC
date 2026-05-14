@@ -6,7 +6,7 @@
   <title>CHAIC 2026 — Caribbean Health AI Congress</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -39,7 +39,12 @@
 
   <!-- Hero -->
   <section id="home" class="hero">
-    <img src="images/ai-brain.webp" alt="AI Brain visualization" class="hero-brain">
+    <div class="hero-brain" aria-hidden="true">
+      <video class="hero-brain-video" autoplay muted loop playsinline>
+        <source src="images/ai-brain.mp4" type="video/mp4">
+      </video>
+      <img class="hero-brain-img" src="images/ai-brain-opt.webp" alt="">
+    </div>
     <div class="hero-gradient"></div>
 
     <div class="hero-body">
@@ -89,16 +94,21 @@
             Caribbean Health<br>
             <span class="hero-accent">AI Congress</span>
           </h1>
-          <a href="https://luma.com/oollgim4" target="_blank" rel="noopener noreferrer" class="btn-register">
-            Register Now
-            <span class="btn-circle">&#8594;</span>
-          </a>
+          <div class="hero-cta-row">
+            <a href="https://luma.com/oollgim4" target="_blank" rel="noopener noreferrer" class="btn-register">
+              Register Now
+              <span class="btn-circle">&#8594;</span>
+            </a>
+            <a href="#agenda" class="btn-agenda">
+              View Agenda
+              <span class="btn-circle-ghost">&#8594;</span>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Right column -->
       <div class="hero-right">
-        <a href="#agenda" class="btn-agenda">View Agenda</a>
         <div class="hero-right-bottom">
           <p class="hero-sub">Transforming Healthcare Through<br>Artificial Intelligence</p>
         </div>
@@ -108,6 +118,7 @@
     <!-- Sponsors strip -->
     <div class="sponsors-bar">
       <div class="sponsors-label">
+        <div class="sponsors-line"></div>
         <span>Sponsors</span>
         <div class="sponsors-line"></div>
       </div>
@@ -134,7 +145,9 @@
       <div class="about-grid">
 
         <div class="about-image-col">
-          <img src="images/about.jpg" alt="About CHAIC 2026" class="about-img">
+          <video class="about-img" autoplay muted loop playsinline>
+            <source src="images/about.mp4" type="video/mp4">
+          </video>
         </div>
 
         <div class="about-content-col">
