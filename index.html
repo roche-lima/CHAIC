@@ -229,56 +229,116 @@
   </section>
 
   <!-- Agenda -->
-  <section id="agenda" class="section section-light">
-    <div class="container">
-      <h2 class="section-title">Agenda</h2>
-      <div class="agenda-tabs">
-        <button class="tab-btn active" data-day="day1">September 25</button>
-        <button class="tab-btn" data-day="day2">September 26</button>
-      </div>
-      <div class="agenda-content" id="day1">
-        <div class="agenda-row">
-          <span class="agenda-time">9:00 AM</span>
-          <span class="agenda-event">Opening Keynote: AI in Caribbean Healthcare</span>
+  <section id="agenda" class="section agenda-section">
+    <div class="agenda-layout">
+
+      <!-- Left: sticky info panel -->
+      <div class="agenda-left">
+        <span class="agenda-label">Conference Program</span>
+        <div class="agenda-day-tabs">
+          <button class="agenda-day-btn active" data-day="day1" data-label="Day 1">September 25</button>
+          <button class="agenda-day-btn" data-day="day2" data-label="Day 2">September 26</button>
         </div>
-        <div class="agenda-row">
-          <span class="agenda-time">10:30 AM</span>
-          <span class="agenda-event">Panel: Machine Learning in Diagnostics</span>
-        </div>
-        <div class="agenda-row">
-          <span class="agenda-time">12:00 PM</span>
-          <span class="agenda-event">Networking Lunch</span>
-        </div>
-        <div class="agenda-row">
-          <span class="agenda-time">2:00 PM</span>
-          <span class="agenda-event">Workshop: Clinical AI Implementation</span>
-        </div>
-        <div class="agenda-row">
-          <span class="agenda-time">4:00 PM</span>
-          <span class="agenda-event">Poster Session &amp; Demos</span>
+        <h2 class="agenda-title" id="agenda-day-title">Day 1 – Agenda<br>Coming Soon</h2>
+        <p class="agenda-desc">Packed with keynotes, panels, workshops, and networking opportunities designed to accelerate impact.</p>
+        <div class="agenda-info-box">
+          <svg class="agenda-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+            <polyline points="9 16 11 18 15 14"/>
+          </svg>
+          <p>From sunrise to night — here's what's happening at CHAIC 2026.</p>
+          <a href="#ticket" class="btn-get-tickets">Get Tickets</a>
         </div>
       </div>
-      <div class="agenda-content hidden" id="day2">
-        <div class="agenda-row">
-          <span class="agenda-time">9:00 AM</span>
-          <span class="agenda-event">Keynote: Future of Digital Health</span>
+
+      <!-- Right: stacking cards -->
+      <div class="agenda-right">
+
+        <!-- Day 1 -->
+        <div class="agenda-day-content" id="day1">
+          <div class="agenda-cards">
+
+            <div class="agenda-card" style="--card-index: 0;">
+              <div class="agenda-card-time">8:00 AM – 9:00 AM</div>
+              <div class="agenda-card-body">
+                <h3 class="agenda-card-title">Registration &amp; Welcome Coffee</h3>
+                <p class="agenda-card-subtitle">Start the day with networking over coffee as we prepare for a full program.</p>
+              </div>
+            </div>
+
+            <div class="agenda-card" style="--card-index: 1;">
+              <div class="agenda-card-time">9:00 AM – 9:30 AM</div>
+              <div class="agenda-card-body">
+                <h3 class="agenda-card-title">Opening Remarks</h3>
+                <p class="agenda-card-subtitle">Welcome address from the CHAIC 2026 organizing committee.</p>
+              </div>
+            </div>
+
+            <div class="agenda-card" style="--card-index: 2;">
+              <div class="agenda-card-time">9:30 AM – 10:00 AM</div>
+              <div class="agenda-card-body">
+                <h3 class="agenda-card-title">First, Do Not Harm</h3>
+                <p class="agenda-card-subtitle">Ethics in the age of Artificial Intelligence</p>
+                <div class="agenda-card-speaker">
+                  <div class="agenda-speaker-avatar"></div>
+                  <div class="agenda-speaker-info">
+                    <span class="agenda-speaker-name">Dra. Yasmin Pedrogo, MD</span>
+                    <span class="agenda-speaker-role">Dean of Academic Affairs, RCM-UPR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-card" style="--card-index: 3;">
+              <div class="agenda-card-time">10:00 AM – 11:00 AM</div>
+              <div class="agenda-card-body">
+                <h3 class="agenda-card-title">AI vs Clinicians: Friend, Rival or Replacement</h3>
+                <p class="agenda-card-subtitle">A panel discussion on the evolving role of AI alongside clinical practice.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="agenda-row">
-          <span class="agenda-time">10:30 AM</span>
-          <span class="agenda-event">Panel: Regulatory Landscape for Health AI</span>
+
+        <!-- Day 2 -->
+        <div class="agenda-day-content hidden" id="day2">
+          <div class="agenda-cards">
+
+            <div class="agenda-card" style="--card-index: 0;">
+              <div class="agenda-card-time">9:00 AM – 10:00 AM</div>
+              <div class="agenda-card-body">
+                <h3 class="agenda-card-title">Day 2 – Coming Soon</h3>
+                <p class="agenda-card-subtitle">Program details for September 26 will be announced shortly.</p>
+              </div>
+            </div>
+
+            <div class="agenda-card" style="--card-index: 1;">
+              <div class="agenda-card-time">10:00 AM – 11:00 AM</div>
+              <div class="agenda-card-body">
+                <p class="agenda-card-subtitle">More sessions coming soon.</p>
+              </div>
+            </div>
+
+            <div class="agenda-card" style="--card-index: 2;">
+              <div class="agenda-card-time">11:00 AM – 12:00 PM</div>
+              <div class="agenda-card-body">
+                <p class="agenda-card-subtitle">More sessions coming soon.</p>
+              </div>
+            </div>
+
+            <div class="agenda-card" style="--card-index: 3;">
+              <div class="agenda-card-time">2:00 PM – 4:00 PM</div>
+              <div class="agenda-card-body">
+                <p class="agenda-card-subtitle">More sessions coming soon.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="agenda-row">
-          <span class="agenda-time">12:00 PM</span>
-          <span class="agenda-event">Networking Lunch</span>
-        </div>
-        <div class="agenda-row">
-          <span class="agenda-time">2:00 PM</span>
-          <span class="agenda-event">Workshop: Ethical AI in Medicine</span>
-        </div>
-        <div class="agenda-row">
-          <span class="agenda-time">4:30 PM</span>
-          <span class="agenda-event">Closing Ceremony &amp; Awards</span>
-        </div>
+
       </div>
     </div>
   </section>
@@ -312,7 +372,7 @@
           <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
         <p>Supported by global leaders in technology and innovation.</p>
-        <a href="#contact" class="btn-become-sponsor">
+        <a href="https://forms.gle/p7GMAfhh3pggnX1U8" target="_blank" rel="noopener noreferrer" class="btn-become-sponsor">
           Become a Sponsor
           <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>

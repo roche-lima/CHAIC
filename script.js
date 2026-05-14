@@ -54,11 +54,13 @@ navMenu.querySelectorAll('a').forEach(link => {
 });
 
 // Agenda day tabs
-document.querySelectorAll('.tab-btn').forEach(btn => {
+document.querySelectorAll('.agenda-day-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.agenda-content').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.agenda-day-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.agenda-day-content').forEach(c => c.classList.add('hidden'));
     btn.classList.add('active');
     document.getElementById(btn.dataset.day).classList.remove('hidden');
+    const titleEl = document.getElementById('agenda-day-title');
+    if (titleEl) titleEl.innerHTML = btn.dataset.label + ' – Agenda<br>Coming Soon';
   });
 });
