@@ -38,8 +38,10 @@ function tick() {
   elSeconds.textContent = pad(seconds, 2);
 }
 
-tick();
-setInterval(tick, 1000);
+if (elDays && elHours && elMinutes && elSeconds) {
+  tick();
+  setInterval(tick, 1000);
+}
 
 /* ── Mobile nav ── */
 const navToggle = document.querySelector('.nav-toggle');
@@ -100,6 +102,25 @@ function duplicateSponsorTrack() {
 }
 
 duplicateSponsorTrack();
+
+/* ── Speakers marquee: duplicate cards in each track once so the
+   vertical (or horizontal on mobile) scroll loops seamlessly.
+   The visible roster is the originals; clones are aria-hidden. */
+function duplicateSpeakersTracks() {
+  document.querySelectorAll('.speakers-track').forEach(track => {
+    const originals = Array.from(track.children);
+    if (originals.length === 0) return;
+    originals.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      const img = clone.querySelector('img');
+      if (img) img.removeAttribute('loading');
+      track.appendChild(clone);
+    });
+  });
+}
+
+duplicateSpeakersTracks();
 
 /* ── Agenda day tabs with sliding pill + fade swap + stats update ── */
 const dayTabs = document.querySelector('.agenda-day-tabs');
