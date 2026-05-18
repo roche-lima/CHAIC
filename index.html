@@ -31,7 +31,7 @@
         <li><a href="#sponsors">Sponsors</a></li>
         <li><a href="#ticket">Ticket</a></li>
         <li class="nav-contact-item">
-          <a href="#contact" class="btn-contact">
+          <a href="#contact-form" class="btn-contact">
             Contact Us
             <span class="btn-circle-nav">&#8594;</span>
           </a>
@@ -219,56 +219,119 @@
   </section>
 
   <!-- Speakers -->
-  <section id="speakers" class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">The Lineup</span>
-        <h2 class="section-title">Speakers</h2>
-        <p class="section-desc">Voices from across medicine, research, and AI — shaping how care is delivered across the Caribbean and beyond.</p>
+  <section id="speakers" class="section-speakers-light">
+    <div class="speakers-layout">
+
+      <!-- LEFT: intro + CTA -->
+      <div class="speakers-intro">
+        <span class="speakers-eyebrow">Speakers</span>
+        <h2 class="speakers-title">Featured Speakers</h2>
+        <p class="speakers-desc">Meet the global leaders and innovators shaping the future of AI in healthcare.</p>
+
+        <div class="speakers-cta-card">
+          <span class="speakers-cta-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="2" width="6" height="12" rx="3"/>
+              <path d="M5 11a7 7 0 0 0 14 0"/>
+              <line x1="12" y1="18" x2="12" y2="22"/>
+              <line x1="8" y1="22" x2="16" y2="22"/>
+            </svg>
+          </span>
+          <p>Leaders, designers, and technologists defining the future of intelligent creativity.</p>
+          <a href="speakers.html" class="speakers-cta-btn">
+            View All Speakers
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      
-      <div class="speakers-grid">
-        <div class="speaker-card">
-          <div class="speaker-avatar">
-            <img src="images/people/DrOrvil-profile-small.webp" alt="Dr. Orvil Martínez Rivera" loading="lazy">
+
+      <!-- RIGHT: dual vertical marquee -->
+      <div class="speakers-marquee" aria-label="Featured speakers">
+        <div class="speakers-col speakers-col--up">
+          <div class="speakers-track" data-track="up">
+            <article class="speaker-card">
+              <img src="images/people/DrOrvil-profile.webp" alt="Dr. Orvil Martínez Rivera" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Orvil Martínez Rivera</h3>
+                <p class="speaker-card-role">Advance Medical Research Center</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/dr-ana-lucumi.webp" alt="Dr. Ana Lucumi" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Ana Lucumi</h3>
+                <p class="speaker-card-role">Founder President, Puerto Rico AI Coalition</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/arlen-meyers.webp" alt="Dr. Arlen Meyers" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Arlen Meyers</h3>
+                <p class="speaker-card-role">CEO, Society of Physician Entrepreneurs</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/dr-anthony-chang.webp" alt="Dr. Anthony Chang" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Anthony Chang</h3>
+                <p class="speaker-card-role">Chief Intelligence Officer, Rady Children's Health</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/dr-herman-taylor.webp" alt="Dr. Herman A. Taylor Jr." loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Herman A. Taylor Jr.</h3>
+                <p class="speaker-card-role">Cardiovascular Research Institute, Morehouse</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/dr-jamboor-vishwanatha.webp" alt="Dr. Jamboor Vishwanatha" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Jamboor Vishwanatha</h3>
+                <p class="speaker-card-role">VP Minority Health Research, UNT Health Science</p>
+              </div>
+            </article>
           </div>
-          <div class="speaker-name">Dr. Orvil Martínez Rivera</div>
-          <div class="speaker-role">Advance Medical Research Center</div>
         </div>
-        <div class="speaker-card reveal">
-          <div class="speaker-avatar">
-            <img src="images/people/yasmin-pedrogo-profile.webp" alt="Dra. Yasmin Pedrogo, MD" />
+        <div class="speakers-col speakers-col--down">
+          <div class="speakers-track" data-track="down">
+            <article class="speaker-card">
+              <img src="images/people/yasmin-pedrogo.webp" alt="Dra. Yasmin Pedrogo" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dra. Yasmin Pedrogo</h3>
+                <p class="speaker-card-role">Dean of Academic Affairs, RCM-UPR</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/dr-abiel-roche-lima.webp" alt="Dr. Abiel Roche-Lima" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Dr. Abiel Roche-Lima</h3>
+                <p class="speaker-card-role">ARL Biomedical Data Science Lab, RCM-UPR</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/erick-brieva.webp" alt="Erick Brieva" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Erick Brieva</h3>
+                <p class="speaker-card-role">CEO, Dedomena.ai</p>
+              </div>
+            </article>
+            <article class="speaker-card">
+              <img src="images/people/mariano-de-socarraz.webp" alt="Mariano de Socarraz" loading="lazy">
+              <div class="speaker-card-overlay">
+                <h3 class="speaker-card-name">Mariano de Socarraz</h3>
+                <p class="speaker-card-role">CEO, CorePlus Clinical and Pathological Services</p>
+              </div>
+            </article>
           </div>
-          <div class="speaker-name">Dra. Yasmin Pedrogo</div>
-          <div class="speaker-role">Dean of Academic Affairs, RCM-UPR</div>
         </div>
-        <div class="speaker-card reveal">
-          <div class="speaker-avatar" data-initials="CR" data-color-index="1"></div>
-          <div class="speaker-name">Dr. Carlos Rivera</div>
-          <div class="speaker-role">Director, AMRC</div>
-        </div>
-        <div class="speaker-card reveal">
-          <div class="speaker-avatar" data-initials="MC" data-color-index="2"></div>
-          <div class="speaker-name">Dr. Maria Chen</div>
-          <div class="speaker-role">AI Researcher, MIT</div>
-        </div>
-        <div class="speaker-card reveal">
-          <div class="speaker-avatar" data-initials="AH" data-color-index="3"></div>
-          <div class="speaker-name">Dr. Ahmed Hassan</div>
-          <div class="speaker-role">VP Innovation, MedAI</div>
-        </div>
-        <div class="speaker-card reveal">
-          <div class="speaker-avatar" data-initials="ST" data-color-index="4"></div>
-          <div class="speaker-name">Dr. Sofia Torres</div>
-          <div class="speaker-role">Caribbean Health Lead</div>
-        </div>
-        <div class="speaker-card reveal">
-          <div class="speaker-avatar" data-initials="JP" data-color-index="5"></div>
-          <div class="speaker-name">Dr. James Park</div>
-          <div class="speaker-role">Stanford Medicine</div>
-        </div>
-        
       </div>
+
     </div>
   </section>
 
@@ -497,10 +560,10 @@
 
     <div class="sponsors-carousel-wrap">
       <div class="sponsors-track" id="sponsors-track">
-        <div class="sponsor-card"><a href="https://sopenet.org/" target="_blank" rel="noopener noreferrer"><img src="images/logos/SPE-White-Letters.webp" alt="Society of Physician Entrepreneurs" loading="lazy" decoding="async"></a></div>
+        <div class="sponsor-card" data-tier="gold"><span class="sponsor-tier-badge">Gold Sponsor</span><a href="https://sopenet.org/" target="_blank" rel="noopener noreferrer"><img src="images/logos/SPE-White-Letters.webp" alt="Society of Physician Entrepreneurs" loading="lazy" decoding="async"></a></div>
         <div class="sponsor-card"><a href="https://abaim.org/" target="_blank" rel="noopener noreferrer"><img src="images/logos/ABAIM-logo-transparent.webp" alt="ABAIM" loading="lazy" decoding="async"></a></div>
         <div class="sponsor-card"><a href="https://www.advanceresearchpr.com/" target="_blank" rel="noopener noreferrer"><img src="images/logos/AMRC.webp" alt="Advance Medical Research Center" loading="lazy" decoding="async"></a></div>
-        <div class="sponsor-card"><a href="http://www.rcm.upr.edu/" target="_blank" rel="noopener noreferrer"><img src="images/logos/RCM-UPR-Logo.webp" alt="Recinto de Ciencias Médicas UPR" loading="lazy" decoding="async"></a></div>
+        <div class="sponsor-card" data-tier="silver"><span class="sponsor-tier-badge">Silver Sponsor</span><a href="http://www.rcm.upr.edu/" target="_blank" rel="noopener noreferrer"><img src="images/logos/RCM-UPR-Logo.webp" alt="Recinto de Ciencias Médicas UPR" loading="lazy" decoding="async"></a></div>
       </div>
     </div>
 
@@ -530,6 +593,9 @@
         <span class="section-eyebrow">Passes</span>
         <h2 class="section-title">Get Your Ticket</h2>
         <p class="section-desc">Early-bird pricing ends July 31, 2026. Choose the pass that fits your role and your goals.</p>
+        <a href="tickets.html" class="btn-ticket" style="margin-top:1.25rem;display:inline-flex;">
+          Compare All Passes
+        </a>
       </div>
       <div class="ticket-grid">
 
@@ -599,6 +665,87 @@
     </div>
   </section>
 
+  <!-- Contact Form -->
+  <section class="contact-section section-dark" id="contact-form">
+    <div class="contact-inner">
+      <div class="contact-form-col reveal">
+        <span class="section-eyebrow">Get in Touch</span>
+        <h2 class="contact-title">Contact CHAIC</h2>
+        <p class="contact-subtitle">
+          Let's start with a free consultation. Share your goals with us, and
+          we'll design a tailored strategy to deliver results.
+        </p>
+        <form
+          id="contact-form-el"
+          action="https://formspree.io/f/xdajokyo"
+          method="POST"
+          novalidate
+        >
+          <div class="contact-form-row">
+            <div class="contact-field">
+              <label for="cf-name">Name *</label>
+              <input id="cf-name" type="text" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="contact-field">
+              <label for="cf-company">Company</label>
+              <input id="cf-company" type="text" name="company" placeholder="Acme Corp" />
+            </div>
+          </div>
+          <div class="contact-form-row">
+            <div class="contact-field">
+              <label for="cf-email">Email *</label>
+              <input id="cf-email" type="email" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="contact-field">
+              <label for="cf-phone">Phone Number</label>
+              <input id="cf-phone" type="tel" name="phone" placeholder="+1 (787) 000-0000" />
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="cf-inquiry">Inquiry Type</label>
+            <select id="cf-inquiry" name="inquiry_type">
+              <option value="" disabled selected>Select Inquiry Type</option>
+              <option value="sponsorship">Sponsorship</option>
+              <option value="speaking">Speaking Opportunity</option>
+              <option value="media">Media / Press</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="cf-message">Messages *</label>
+            <textarea
+              id="cf-message"
+              name="message"
+              placeholder="Tell us briefly about your goals"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <p class="contact-form-status" id="contact-form-status" aria-live="polite"></p>
+          <button type="submit" class="btn-register contact-submit">
+            Book Free Consultation
+            <span class="btn-circle" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+      <div class="contact-image-col reveal" aria-hidden="true">
+        <picture>
+          <source srcset="images/assets/CHAIC-Form-image-opt.webp" type="image/webp">
+          <img
+            src="images/assets/CHAIC-Form-image.png"
+            alt="Congress attendees networking and exchanging ideas in a vibrant conference setting"
+            loading="lazy"
+            class="contact-bg-img"
+          >
+        </picture>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer" id="contact">
     <div class="footer-grid">
@@ -637,7 +784,7 @@
         <a href="https://forms.gle/p7GMAfhh3pggnX1U8" target="_blank" rel="noopener noreferrer">Become a Sponsor
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
-        <a href="mailto:press@chaic.org">Press inquiries</a>
+        <a href="mailto:info@chaic.org">Press inquiries</a>
       </div>
     </div>
 

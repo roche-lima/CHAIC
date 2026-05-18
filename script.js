@@ -38,8 +38,10 @@ function tick() {
   elSeconds.textContent = pad(seconds, 2);
 }
 
-tick();
-setInterval(tick, 1000);
+if (elDays && elHours && elMinutes && elSeconds) {
+  tick();
+  setInterval(tick, 1000);
+}
 
 /* ── Mobile nav ── */
 const navToggle = document.querySelector('.nav-toggle');
@@ -100,6 +102,25 @@ function duplicateSponsorTrack() {
 }
 
 duplicateSponsorTrack();
+
+/* ── Speakers marquee: duplicate cards in each track once so the
+   vertical (or horizontal on mobile) scroll loops seamlessly.
+   The visible roster is the originals; clones are aria-hidden. */
+function duplicateSpeakersTracks() {
+  document.querySelectorAll('.speakers-track').forEach(track => {
+    const originals = Array.from(track.children);
+    if (originals.length === 0) return;
+    originals.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      const img = clone.querySelector('img');
+      if (img) img.removeAttribute('loading');
+      track.appendChild(clone);
+    });
+  });
+}
+
+duplicateSpeakersTracks();
 
 /* ── Agenda day tabs with sliding pill + fade swap + stats update ── */
 const dayTabs = document.querySelector('.agenda-day-tabs');
@@ -259,5 +280,40 @@ if (scrollTopBtn) {
       top: 0,
       behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });
+  });
+}
+
+/* ── Contact form async submit ── */
+const contactFormEl = document.getElementById('contact-form-el');
+const contactFormStatus = document.getElementById('contact-form-status');
+
+if (contactFormEl) {
+  contactFormEl.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactFormEl.querySelector('.contact-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(contactFormEl.action, {
+        method: 'POST',
+        body: new FormData(contactFormEl),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        contactFormStatus.textContent = "Message sent! We'll be in touch soon.";
+        contactFormStatus.className = 'contact-form-status contact-form-status--success';
+        contactFormEl.reset();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      contactFormStatus.textContent = 'Something went wrong. Please email info@chaic.org directly.';
+      contactFormStatus.className = 'contact-form-status contact-form-status--error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Book Free Consultation <span class="btn-circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+    }
   });
 }
