@@ -457,6 +457,30 @@ a {
     animation: none;
   }
 }
+.hero-venue {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.6rem;
+  margin-bottom: 1.75rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.hero-venue:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero-venue:hover svg {
+  opacity: 1;
+}
+.hero-venue svg {
+  flex-shrink: 0;
+  color: var(--accent-2);
+  opacity: 0.8;
+}
 
 .countdown {
   display: flex;
@@ -1428,7 +1452,22 @@ a {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
   line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+.agenda-venue-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 2rem;
+}
+.agenda-venue-note svg {
+  flex-shrink: 0;
+  color: var(--accent-2);
+  opacity: 0.7;
 }
 
 .agenda-info-box {
